@@ -1,8 +1,6 @@
-import { useEffect, useState } from "react";
-import "./App.css";
-import Jumbutron from "./component/Jumbutron";
+import React, { useEffect, useState } from "react";
 
-function App() {
+function Jumbutron() {
   function fetchFlickrData(apiKey, searchText, callback) {
     const apiUrl = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&text=${searchText}&format=json&nojsoncallback=1`;
 
@@ -40,20 +38,29 @@ function App() {
       }),
     []
   );
-
   return (
-    <div className='App'>
-      <Jumbutron />
-      React The sun shone brightly over the rolling hills as Sarah made her way
-      down the winding path. She had been walking for hours, lost in thought and
-      enjoying the peacefulness of nature. As she rounded a bend, she saw a
-      small cottage nestled in a clearing, smoke curling from the chimney.
-      Curiosity piqued, she quickened her pace and approached the door. It
-      creaked open with a gentle push, revealing a cozy interior filled with
-      flickering candlelight. An old woman sat in a rocking chair by the fire, a
-      warm smile spreading across her wrinkled face as Sarah stepped inside.
-    </div>
+    <>
+      <header>
+        <h1>
+          Balkan Style <br /> <span>[ Portfolio Gallery ]</span>
+        </h1>
+      </header>
+
+      <div id='top'></div>
+      <section class='gallery'>
+        <div class='row'>
+          <ul>
+            <li>
+              {data.map((a, b) => (
+                <div key={a.id}>
+                  <img src={a.url} alt={a.title} />
+                </div>
+              ))}
+            </li>
+          </ul>
+        </div>
+      </section>
+    </>
   );
 }
-
-export default App;
+export default Jumbutron;
