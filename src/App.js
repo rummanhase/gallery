@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import Jumbutron from "./component/Jumbutron";
+import SearchBar from "./component/SearchBar";
+import Photoes from "./component/Photoes";
 
 function App() {
   function fetchFlickrData(apiKey, searchText, callback) {
@@ -43,6 +45,8 @@ function App() {
 
   return (
     <div className='App'>
+      <SearchBar />
+      <Photoes />
       <Jumbutron />
       React The sun shone brightly over the rolling hills as Sarah made her way
       down the winding path. She had been walking for hours, lost in thought and
