@@ -17,10 +17,10 @@ function App() {
       <Header handleWord={handleWord} />
         <Routes>
           <Route path='/' element={<Photoes myWord='cricket' />} />
-          <Route path='/football' element={<Photoes myWord='football' />} />
+          <Route path='/beaches' element={<Photoes myWord='beaches' />} />
           <Route path='/mountains' element={<Photoes myWord='mountains' />} />
-          <Route path='/cars' element={<Photoes myWord='cars' />} />
-          <Route path='/got' element={<Photoes myWord='games of thrones' />} />
+          <Route path='/birds' element={<Photoes myWord='birds' />} />
+          <Route path='/food' element={<Photoes myWord='food' />} />
         </Routes>
       </BrowserRouter>
     </div>

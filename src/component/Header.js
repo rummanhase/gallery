@@ -25,21 +25,25 @@ export default function Header({ handleWord }) {
       </div>
       <div className='my-search'>
         <ul>
+        {window.location.pathname !== '/' && 
         <li>
-            <Link to='/'>Home</Link>
-          </li>
+          
+          <Link to='/'>Home</Link>
+        </li>}
+        {window.location.pathname !== '/mountains' && <li>
+          <Link to='/mountains'>Mountains</Link>
+          </li>}
+          {window.location.pathname !== '/beaches' && <li>
+            <Link to='/beaches'>Beaches</Link>
+          </li>}{window.location.pathname !== '/birds' && <li>
+            <Link to='/birds'>Birds</Link>
+          </li>}{window.location.pathname !== '/food' && 
           <li>
-            <Link to='/football'>Football</Link>
-          </li>
-          <li>
-            <Link to='/mountains'>Mountains</Link>
-          </li>
-          <li>
-            <Link to='/cars'>Cars</Link>
-          </li>
-          <li>
-            <Link to='/got'>GOT</Link>
-          </li>
+            <Link to='/food'>Food</Link>
+          </li>}
+          
+          
+         
         </ul>
     </div>
     </>
