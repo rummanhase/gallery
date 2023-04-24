@@ -23,11 +23,12 @@ function fetchFlickrData(apiKey, searchText, callback) {
 }
 
 const apiKey = "e005d12081626241211a1d27ce3055ad";
-const searchText = "cricket";
 
-export const UserContext = createContext();
+export const UserContext = createContext([]);
 
 export default function ContextApi() {
+  
+const [searchText, setSearchText] = useState("cricket")
   const [data, setData] = useState([]);
   useEffect(
     () =>
@@ -39,10 +40,10 @@ export default function ContextApi() {
           console.log(photos);
         }
       }),
-    []
+    [searchText]
   );
   return (
-    <UserContext.Provider value={data}>
+    <UserContext.Provider value={{data , setSearchText ,searchText}}>
       <App />
     </UserContext.Provider>
   );
