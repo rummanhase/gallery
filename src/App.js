@@ -3,6 +3,7 @@ import Photoes from "./component/Photoes";
 import Header from "./component/Header";
 import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Footer from "./component/Footer";
 
 function App() {
   const [myWord, setMyWord] = useState("");
@@ -22,6 +23,7 @@ function App() {
           <Route path='/birds' element={<Photoes myWord='birds' />} />
           <Route path='/food' element={<Photoes myWord='food' />} />
         </Routes>
+        <Footer/>
       </BrowserRouter>
     </div>
   );

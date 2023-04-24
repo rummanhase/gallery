@@ -19,7 +19,6 @@ export default function Header({ handleWord }) {
   return (
     <>
     <div className='my-search'>
-      Header
       
       {window.location.pathname === '/' && <SearchBar onTextChange={getWord} />}
       </div>
